@@ -129,7 +129,7 @@ class App extends React.Component {
       <div className="App">
         <div className="left-container">
           <p className="author">
-            <span>Developer - Hemanth Savvana </span>
+            <span>Developer - Paushigaa </span>
           </p>
           <h1>Snake & Ladders</h1>
           {!hidePlayerSelection && (
