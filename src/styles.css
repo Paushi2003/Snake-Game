@@ -1,0 +1,169 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+}
+.author {
+  background: cadetblue;
+}
+.ledger-player {
+  display: flex;
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+li {
+  text-align: start;
+}
+
+.m-l-20 {
+  margin-left: 20px;
+}
+
+.error {
+  color: red;
+}
+.snake {
+  position: absolute;
+  margin-left: -6px;
+  margin-top: 36px;
+  color: red;
+  background: yellow;
+}
+.ladder {
+  position: absolute;
+  margin-left: -6px;
+  margin-top: 36px;
+  color: green;
+  background: aqua;
+}
+.each-box {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.icons-in-box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 48px;
+}
+.P1_shape {
+  height: 20px;
+  width: 20px;
+  background-color: #555;
+}
+.P2_shape {
+  height: 20px;
+  width: 20px;
+  background-color: #555;
+  border-radius: 50%;
+}
+.P3_shape {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #555;
+}
+.P4_shape {
+  border-bottom: 15px solid #555;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  width: 10px;
+}
+.layout {
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.board {
+  margin-left: 40px;
+  background: #fff;
+  border-radius: 5px;
+  max-width: 600px;
+  min-height: 600px;
+  height: 600px;
+  display: flex;
+  border: solid 3px #333;
+  flex-flow: column;
+  transform: scale(1, -1);
+  /* animation-name: flipBoard;
+  animation-duration: 100s;
+  animation-delay: 2s; */
+}
+
+@keyframes flipBoard {
+  0% {
+    transform: scale(1);
+  }
+  3% {
+    transform: scale(1, -1);
+  }
+  100% {
+    transform: scale(1, -1);
+  }
+}
+
+.box-row {
+  display: flex;
+}
+.box-row:nth-child(2n) {
+  flex-direction: row-reverse;
+  /* animation-name: reverseRows;
+  animation-duration: 100s;
+  animation-delay: 2s; */
+}
+
+@keyframes reverseRows {
+  0% {
+    flex-direction: row-reverse;
+  }
+  3% {
+    flex-direction: row-reverse;
+  }
+  100% {
+    flex-direction: row-reverse;
+  }
+}
+
+.box {
+  width: 59px;
+  height: 59px;
+  border: solid 0.5px #d87878;
+  text-align: left;
+  vertical-align: text-top;
+  transition: 0.2s ease-in;
+  position: relative;
+  display: flex;
+  transform: scale(1, -1);
+  /* animation-name: loadingBox;
+  animation-duration: 100s;
+  animation-delay: 2s; */
+}
+
+@keyframes loadingBox {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1, -1);
+  }
+
+  100% {
+    transform: scale(1, -1);
+  }
+}
+
+.box span {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  transition: 0.3s ease-in;
+}
+.box:hover span {
+  top: 22px;
+  left: 20px;
+  font-weight: bold;
+  transition: 0.1s ease-in;
+}
+
+.box:nth-child(2n) {
+  background: #d87878;
+  border: solid 0.5px #fff;
+}
